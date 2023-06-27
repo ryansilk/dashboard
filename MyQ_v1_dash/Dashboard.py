@@ -11,8 +11,27 @@ from scipy.stats import norm
 from ta import add_all_ta_features
 import openpyxl
 
+def display_subscription_message():
+    st.write(
+        "This is for premium users only, please login or subscribe to access our premium market dashboard")
 
+    st.write("There's a 7 day free trial!")
 
+    url = 'https://buy.stripe.com/6oEaHAaZG6s0a4g4gg'
+
+    st.markdown(
+        f'''
+            <a href={url}>
+            <button style="background-color: LightGrey; color: black; border: none; 
+                            padding: 10px 20px; border-radius: 4px; font-weight: bold;
+                            text-decoration: none; cursor: pointer; 
+                            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
+                Subscribe Now!
+            </button>
+        </a>
+        ''',
+        unsafe_allow_html=True
+    )
 
 token = 'sk_f55514c58a86442594c465b3340a3d36'
 
